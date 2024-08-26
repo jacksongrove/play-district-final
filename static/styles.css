@@ -1,0 +1,130 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #eeeae4;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f4f0e8;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.chat-box {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.chat-message {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+  position: relative;
+}
+
+.user-message {
+  background-color: #ffffff;
+  align-self: flex-end;
+  border: 2px solid #2596be;
+  text-align: left;
+  margin-left: auto;
+}
+
+.user-message:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid #2596be;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.bot-message {
+  background-color: #ffffff;
+  align-self: flex-start;
+  border: 2px solid #bebebe;
+  text-align: left;
+}
+
+.bot-message:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-right: 10px solid #bebebe;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.input-box {
+  display: flex;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f4f0e8;
+  position: sticky;
+  bottom: 0;
+  width: calc(100% - 40px); /* Adjust width to account for padding */
+  box-sizing: border-box;
+}
+
+.input-box input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: #ffffff;
+}
+
+.input-box button {
+  padding: 10px;
+  border: none;
+  background-color: #2596be;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-box button:hover {
+  background-color: #bebebe;
+}
+
+.input-box button:after {
+  content: "↑";
+  font-size: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #f4f0e8;
+}
+
+header img {
+  max-width: 100%;
+  height: auto;
+}
